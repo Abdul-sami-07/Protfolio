@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdul Sami | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: url('profile.jpg') center/cover no-repeat;
+      margin: auto;
+      box-shadow: 0 0 15px #00f2feaa;
+      animation: float 3s ease-in-out infinite;
+      border: 4px solid #00f2fe88;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 0.3rem;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .typing {
+      font-size: 1.3rem;
+      color: #ccc;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #00f2fe;
+      width: 0;
+      animation: typing 3.5s steps(40, end) forwards, blink 0.7s step-end infinite;
+      margin: 0 auto 1rem;
+      max-width: fit-content;
+    }
+
+    @keyframes typing {
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    section.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #00f2fe;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border: 1px solid #ffffff0d;
+      max-width: 700px;
+      margin: 1rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #00f2fe22;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-box {
+      background: #1a1a2e;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00f2fe33;
+      color: #00f2fe;
+      font-weight: bold;
+      min-width: 100px;
+    }
+
+    .social a {
+      margin: 0 1rem;
+      color: #00f2fe;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #4facfe;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+      background: #0a0a0f;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .typing { font-size: 1rem; }
+      .card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="profile-pic"></div>
+    <h1>Abdul Sami Tanguturi</h1>
+    <div class="typing">Python Full Stack Developer</div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m a passionate and confident Python Full Stack Developer skilled in building end-to-end web applications. I love turning ideas into real-world digital solutions and constantly explore new technologies to grow as a developer.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="card">
+      <h3>Languages & Frontend</h3>
+      <div class="skills-grid">
+        <div class="skill-box">Python</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">JavaScript</div>
+      </div>
+      <h3 style="margin-top:2rem;">Backend & Framework</h3>
+      <div class="skills-grid">
+        <div class="skill-box">Django</div>
+      </div>
+      <h3 style="margin-top:2rem;">Database</h3>
+      <div class="skills-grid">
+        <div class="skill-box">SQL</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="internship">
+    <h2>Internship</h2>
+    <div class="card">
+      <h3>Codeworks Solutions pvt ltd</h3>
+      <p><strong>Role:</strong> Python Full Stack Developer Intern</p>
+      <p><strong>Duration:</strong> Dec 2024 – Mar 2025</p>
+      <p>
+        Worked on building full-stack web applications using Python, Django, HTML, CSS, and JavaScript. Designed user interfaces with responsive layouts, integrated backend APIs, and managed data with SQL. Participated in agile sprints and collaborated with senior developers to deliver scalable features.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.Sc. (MSCS)</h3>
+      <p><strong>College:</strong> Sri Venkateswara College of Arts and Science</p>
+      <p><strong>CGPA:</strong> 8.2</p>
+      <p><strong>Duration:</strong> 2022 – 2025</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>💼 Portfolio Website</h3>
+      <p>A modern animated personal portfolio website built using HTML and CSS, featuring animated profile image, smooth scroll reveal, and categorized sections like About, Skills, Internship, and Education.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Connect With Me</h2>
+    <div class="card social">
+      <a href="https://www.linkedin.com/in/abdul-sami-b32201344" target="_blank">LinkedIn</a>
+      <a href="mailto:abdulsamitangutu11@gamil.com">Email</a>
+      <a href="tel:+919515297479">Call</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Abdul Sami | All Rights Reserved
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 400;
+        if (top > offset) sec.classList.add('reveal');
+      });
+    });
+  </script>
+</body>
+</html>
